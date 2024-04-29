@@ -5,15 +5,15 @@ var httpReq = new XMLHttpRequest();
 function getData()
 {
 
-    httpReq.open("GET",  "https://api.themoviedb.org/3/movie/now_playing?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR2ufqCGbRrpvJ2FBqhCMoo4db44TRA7GJ-1j_VaoXtd66iwBkdoeVRy8hI" ) // hatft7 tari2 bena w ben eltanyeen
-    httpReq.send(); // hatb3t 3arbia nos na2l t7ml eldata
+   // httpReq.open("GET",  "https://api.themoviedb.org/3/movie/now_playing?api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR2ufqCGbRrpvJ2FBqhCMoo4db44TRA7GJ-1j_VaoXtd66iwBkdoeVRy8hI" ) // hatft7 tari2 bena w ben eltanyeen
+    httpReq.send(); 
     httpReq.onreadystatechange = function()
     {
         if(httpReq.readyState == 4 && httpReq.status == 200)
         {
             
     
-            allData =  JSON.parse( httpReq.response).results; // di hat4il eldata ely rag3a
+            allData =  JSON.parse( httpReq.response).results; 
             displayData();
         }
     }
